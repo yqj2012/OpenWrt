@@ -17,6 +17,7 @@ DEFAULT_PACKAGES:=\
 	base-files \
 	busybox \
 	ca-bundle \
+	curl \
 	dropbear \
 	fstools \
 	libc \
@@ -31,7 +32,7 @@ DEFAULT_PACKAGES:=\
 	urandom-seed \
 	urngd \
   luci luci-compat luci-lib-ipkg wget \
-  default-settings luci-app-wol luci-app-vlmcsd luci-app-ramfree luci-app-sfe \
+  default-settings luci-app-wol luci-app-vlmcsd luci-app-ramfree \
   luci-app-ddns ddns-scripts_aliyun ddns-scripts_dnspod \
   luci-app-timecontrol luci-app-control-timewol luci-app-control-webrestriction luci-app-control-weburl
 # For the basic set
@@ -48,7 +49,6 @@ DEFAULT_PACKAGES.router:=\
 	firewall \
 	ip6tables \
 	iptables \
-	kmod-ipt-offload \
 	odhcp6c \
 	odhcpd-ipv6only \
 	ppp \
