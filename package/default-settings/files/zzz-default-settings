@@ -4,7 +4,7 @@ touch /etc/crontabs/root
 
 uci set luci.main.lang=zh_cn
 #设置默认主题
-#uci set luci.main.mediaurlbase=/luci-static/bootstrap_mod
+uci set luci.main.mediaurlbase=/luci-static/bootstrap
 uci commit luci
 
 uci set system.@system[0].timezone=CST-8
@@ -54,7 +54,7 @@ sed -i '/log-facility/d' /etc/dnsmasq.conf
 echo "log-facility=/dev/null" >> /etc/dnsmasq.conf
 
 # 删除状态页不需显示的
-rm -rf /usr/lib/lua/luci/view/admin_status/index
+rm -rf /www/luci-static/resources/view/status/include/70_* /www/luci-static/resources/view/status/include/80_* /www/luci-static/resources/view/status/include/90_*
 #mv -f /usr/lib/lua/luci/view/admin_status/index /usr/lib/lua/luci/view/admin_status/index_backup 2>/dev/null
 
 #禁用某些可能会自启动且用不上的依赖包服务
