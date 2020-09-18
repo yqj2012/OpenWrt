@@ -37,6 +37,10 @@ avm,fritzbox-7530 |\
 glinet,gl-b1300)
 	ucidef_set_led_wlan "wlan" "WLAN" "${boardname}:green:wlan" "phy0tpt"
 	;;
+edgecore,oap100)
+	ucidef_set_led_wlan "wlan2g" "WLAN2G" "${boardname}:blue:wlan2g" "phy0tpt"
+	ucidef_set_led_wlan "wlan5g" "WLAN5G" "${boardname}:blue:wlan5g" "phy1tpt"
+	;;
 engenius,eap1300)
 	ucidef_set_led_switch "lan" "LAN" "${boardname}:blue:lan" "switch0" "0x20"
 	ucidef_set_led_wlan "wlan2g" "WLAN2G" "${boardname}:blue:wlan2g" "phy0tpt"
@@ -72,6 +76,7 @@ zyxel,nbg6617)
 	ucidef_set_led_wlan "wlan2g" "WLAN2G" "${boardname}:green:wlan2G" "phy0tpt"
 	ucidef_set_led_wlan "wlan5g" "WLAN5G" "${boardname}:green:wlan5G" "phy1tpt"
 	;;
+edgecore,ecw5211 |\
 zyxel,wre6606)
 	ucidef_set_led_wlan "wlan2g" "WLAN2G" "${boardname}:green:wlan2g" "phy0tpt"
 	ucidef_set_led_wlan "wlan5g" "WLAN5G" "${boardname}:green:wlan5g" "phy1tpt"
@@ -80,8 +85,6 @@ p2w,r619ac |\
 p2w,r619ac-128m)
 	ucidef_set_led_wlan "wlan2g" "WLAN2G" "r619ac:blue:wlan2g" "phy0tpt"
 	ucidef_set_led_wlan "wlan5g" "WLAN5G" "r619ac:blue:wlan5g" "phy1tpt"
-	;;
-*)
 	;;
 esac
 
